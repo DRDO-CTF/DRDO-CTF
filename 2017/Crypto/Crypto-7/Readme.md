@@ -121,7 +121,6 @@ random = "BRAHMOS_{SSONIC}"
 key_AES = ''.join(hex(ord(a) ^ ord(b))[2:].zfill(2) for a,b in zip(key_init,random))
 
 # To Decrypt AES encrypted message
-
 from Crypto.Cipher import AES
 decryption_suite = AES.new(bytes(bytearray.fromhex(key_AES)), AES.MODE_CBC, 16 * '\x00')
 crypt = "9232B495D5E647E4D6676ADBA85910796A6E0FBE41D765FE8FC301310ECF9605284DEF29EA6238283B2FD2DD2A104BD6C267A1FB72D259BB084AED33D29D2A8CE48E852BEC43A3F929524EB35D15D2F4"
@@ -130,13 +129,11 @@ decryption_suite.decrypt(bytes(bytearray.fromhex(crypt)))
 # output is : FLAG IS IN HMAC PROCESS|A_KEY:1B951B881FF16F9824F10AF41EF008BA0081138618E6||||||
 
 # To find HMAC Key using A_KEY
-
 key_reverse = "039b039b039b039b039b039b039b039b039b039b039b".decode('hex')
 A_KEY = "1B951B881FF16F9824F10AF41EF008BA0081138618E6".decode('hex')
 key_HMAC_hex = ''.join(hex(ord(a) ^ ord(b))[2:].zfill(2) for a,b in zip(key_reverse,A_KEY))
 
 # Going into first step of HMAC reveals the flag
-
 o_pad = "5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c".decode('hex')
 flag = ''.join(hex(ord(a) ^ ord(b))[2:].zfill(2) for a,b in zip(o_pad,key_HMAC_hex.decode('hex')))
 flag.decode('hex')
