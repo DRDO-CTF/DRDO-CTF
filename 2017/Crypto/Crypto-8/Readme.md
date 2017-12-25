@@ -36,7 +36,8 @@ Go to Wireshark->Analyze tab --> Decode As --> type port 1024 and select SSL pro
 
 [DecryptMe.pcapng](DecryptMe.pcapng)
 
-(Following file has the flag itself. It was uploaded by mistake.)
+(Following file has the flag itself. It was uploaded by mistake. A similar challenge Crypto-9 was added later.)
+
 [Problem\_8\_Hard.txt](Problem\_8\_Hard.txt)
 
 [rfc2246.txt](rfc2246.txt)
