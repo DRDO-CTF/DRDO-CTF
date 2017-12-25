@@ -64,4 +64,7 @@ If you bruteforce in the given range of values you will find follwing set of par
 |16|23|654|1439|859|329|
 |17|23|654|1475|823|329|
 
+You can observe that whatever the value of a and b, g<sup>(ab)</sup> mod q is same which is `329` and this is our secret value.
+
+3. 
 ## Python Program
