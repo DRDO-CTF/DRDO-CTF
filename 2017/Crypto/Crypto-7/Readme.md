@@ -88,7 +88,7 @@ XOR will output: `180e18131c6a6c03276a096f1d6b0b21031a101d1b7d` which is HMAC Ke
 
 ![HMAC\_Process.png](HMAC\_Process.png)
 
-It is clear from above diagram that they HMAC key is XORed with two fixed byte arrays. Lets try the first one. 
+It is clear from above diagram that they HMAC key is XORed with two fixed byte arrays called o\_pad and i\_pad. Lets try the first one which is o\_pad. 
 
 o\_pad is `5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c` 
 HAMC Key is `180e18131c6a6c03276a096f1d6b0b21031a101d1b7d`
@@ -96,4 +96,51 @@ HAMC Key is `180e18131c6a6c03276a096f1d6b0b21031a101d1b7d`
 XOR will output `464c41475f7b593442354e317d5f4341505455524544` which is `DRDO@60_{6U3A7W}_FLAG!`
 
 5. Flag is `DRDO@60_{6U3A7W}_FLAG!`
+
  ## Python Program
+ ```Python
+ 
+ # To brute force a,b
+ for g in range(2,25):
+    print "\ng is: " + str(g) + "\n"
+    for q in range(401,700):
+        #print "q is: " + str(q)
+        for a in range(798,1500):
+            for b in range(798,1500):
+                if (a+b == 2298 and pow(g,a)%q == 455 and pow(g,b)%q == 491):
+                    print "g is: " + str(g) +" q is: "+ str(q) + " a is: " + str(a) + " b is: " + str(b) +"\n"
+                    print "Secret is: " + str(pow(g,a*b)%q) + "\n"
+ 
+#g^ab mod q = 329 and hex is 0149
+#revese of g^ab mod q = 923 and hex is 039b
+
+# To find AES-Key
+key_init = "01490149014901490149014901490149".decode('hex')
+random = "BRAHMOS_{SSONIC}"
+
+key_AES = ''.join(hex(ord(a) ^ ord(b))[2:].zfill(2) for a,b in zip(key_init,random))
+
+# To Decrypt AES encrypted message
+
+from Crypto.Cipher import AES
+decryption_suite = AES.new(bytes(bytearray.fromhex(key_AES)), AES.MODE_CBC, 16 * '\x00')
+crypt = "9232B495D5E647E4D6676ADBA85910796A6E0FBE41D765FE8FC301310ECF9605284DEF29EA6238283B2FD2DD2A104BD6C267A1FB72D259BB084AED33D29D2A8CE48E852BEC43A3F929524EB35D15D2F4"
+decryption_suite.decrypt(bytes(bytearray.fromhex(crypt)))
+
+# output is : FLAG IS IN HMAC PROCESS|A_KEY:1B951B881FF16F9824F10AF41EF008BA0081138618E6||||||
+
+# To find HMAC Key using A_KEY
+
+key_reverse = "039b039b039b039b039b039b039b039b039b039b039b".decode('hex')
+A_KEY = "1B951B881FF16F9824F10AF41EF008BA0081138618E6".decode('hex')
+key_HMAC_hex = ''.join(hex(ord(a) ^ ord(b))[2:].zfill(2) for a,b in zip(key_reverse,A_KEY))
+
+# Going into first step of HMAC reveals the flag
+
+o_pad = "5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c".decode('hex')
+flag = ''.join(hex(ord(a) ^ ord(b))[2:].zfill(2) for a,b in zip(o_pad,key_HMAC_hex.decode('hex')))
+flag.decode('hex')
+#output is 'DRDO@60_{6U3A7W}_FLAG!'
+
+ ```
+ 
