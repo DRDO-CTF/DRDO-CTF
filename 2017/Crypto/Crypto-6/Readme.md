@@ -52,7 +52,7 @@ We can rewrite the hash function(Hash(x<sub>1</sub>,x<sub>2</sub>,x<sub>3</sub>,
 
 Lets assument any input string `s`, then
 
-1 <sup>st</sup> Byte of Hash : `Hash(s<sub>1</sub>,s<sub>6</sub>,s<sub>8</sub>,...) mod 256`
+1 <sup>st</sup> Byte of Hash : Hash(s<sub>1</sub>,s<sub>6</sub>,s<sub>8</sub>,...) mod `256`
 
 
 ## Python Program
