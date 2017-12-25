@@ -17,7 +17,7 @@ Captain got a CHARACTER Message with SPECIAL private key. Let him know the messa
 
 Hint: **Password Length < 15**
 
-![private.key](private.key)
+[private.key](private.key)
 
 ## Write-up
 
