@@ -17,7 +17,7 @@ ClientKeyExchnage message contains an encrypted PreMasterSecret which is encrypt
 Additional Information:
 
 * TLS Version: 1.0
-* Server Private key: cyber_challenge.key
+* Server Private key: cyber\_challenge.key
 * PCAP: DecryptMe.pcapng
 * Key`_`Block.JPG, Master`_`Secret.JPG, PRF`_`Phash.JPG and rfc2246.txt will help you to understand the protocol and decrypt the content.
 
