@@ -116,4 +116,5 @@ for i in range(9,len(input_string),2):
 
 Hash = str(hex(first_byte%256))[2:] + str(hex(second_byte%256))[2:] + str(hex(third_byte%256))[2:] + str(hex(forth_byte%256))[2:] + str(hex(fifth_byte%256))[2:]
 print "5-Byte Hash of input string is: " + Hash
+#output is : ef8bb95856
 ```
