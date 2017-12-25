@@ -36,13 +36,13 @@ You have to break sample encryption and authentication system to capture the fla
 * `Generator g<25 and 400<q<700`
 * `100 < a , b < 1500 and a + b = 2298`
 
-...Now we need to bruteforce for the value of a and b to find g<sup>(ab)</sup>. 
+   Now we need to bruteforce for the value of a and b to find g<sup>(ab)</sup>. 
 
-...While writing the bruteforce it can be observed that both `a,b >= 799` because to achieve the addition `2298` if one parameter is maximum `1499` then other has to minimum `799`. 
+   While writing the bruteforce it can be observed that both `a,b >= 799` because to achieve the addition `2298` if one    parameter is maximum `1499` then other has to minimum `799`. 
 
-...Therfore second codition could be modified to `798 < a , b < 1500 and a + b = 2298`
+   Therfore second codition could be modified to `798 < a , b < 1500 and a + b = 2298`
 
-...If you bruteforce in the given range of values you will find follwing set of parameter satisfying the mentioned conditions.
+   If you bruteforce in the given range of values you will find follwing set of parameter satisfying the mentioned conditions.
 
 |Sl|g|q|a|b|g<sup>(ab)</sup> mod q|
 | ----:|:---------:| -----:|----:|----:|----:|
@@ -64,7 +64,7 @@ You have to break sample encryption and authentication system to capture the fla
 |16|23|654|1439|859|329|
 |17|23|654|1475|823|329|
 
-...You can observe that whatever the value of a and b, g<sup>(ab)</sup> mod q is same which is `329` and this is our secret value.
+   You can observe that whatever the value of a and b, g<sup>(ab)</sup> mod q is same which is `329` and this is our secret value.
 
 3. Now you need to XOR `329` with random `BRAHMOS_{SSNOIC}`. To do that you need to find hex of `329`, which is `0149`(two bytes) and XOR with every two bytes of given random. The output will be the key for AES-128 decryption.
 
