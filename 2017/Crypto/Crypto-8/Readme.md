@@ -33,7 +33,7 @@ Online Resources:
 
 [DecryptMe.pcapng](DecryptMe.pcapng)
 
-[``Problem_8_Hard.txt``] (``Problem_8_Hard.txt``)
+[Problem\_8\_Hard.txt] (Problem\_8\_Hard.txt)
 
 [rfc2246.txt] (rfc2246.txt)
 
