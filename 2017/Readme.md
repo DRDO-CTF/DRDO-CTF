@@ -15,7 +15,7 @@
 
 **Hard:** 200
 
-## Scoreboard (Top 10)
+## Scoreboard
 
 |Place|Team|Score
 | ---- |:-------------:| -----:|
