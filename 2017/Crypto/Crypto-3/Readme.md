@@ -4,7 +4,7 @@
 
 **Points:** 50
 
-**Solves:** 75
+**Solves:** 12
 
 **Description:**
 
