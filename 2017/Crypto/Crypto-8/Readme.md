@@ -49,5 +49,10 @@ Go to Wireshark->Analyze tab --> Decode As --> type port 1024 and select SSL pro
 ![PRF\_PHash.JPG](PRF\_PHash.JPG)
 
 
-## Write-up
+## Write-up  (For correct challenge, please refer to Crypto-9)
 
+Flag of this challenge was mistakenly uploaded in attachment `Problem\_8\_Hard.txt`. 
+
+Flag is : `DRDO@60_{G8F05E}_FLAG!`
+
+For correct version of challenge, plese refer to Crypto-9 challenge
