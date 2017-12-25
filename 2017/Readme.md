@@ -5,7 +5,8 @@
 
 **Moderate:** 5
 
-**Hard:** 5 (Flag for 1 Challenge was mistakenly uploaded in one of the attachment. Therefore effectively only 4 Hard Challenges)
+**Hard:** 5 
+(Flag for 1 Challenge was mistakenly uploaded in one of the attachment. Therefore effectively only 4 Hard Challenges)
 
 ## Maximum Points: 2250
 **Easy:** 50
