@@ -1,4 +1,4 @@
-# DRDO CTF 2017 : Stego-1
+# DRDO CTF 2017 : Stego-2
 
 **Category:** Steganography
 
