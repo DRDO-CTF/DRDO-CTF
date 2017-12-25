@@ -13,7 +13,7 @@
 Two army units want to communicate to each other and need a system to provide confidentiality, integrity and authentication. A **Diffie-Hellman key exchange** based system has been designed to meet the requirements. 
 The mechanism is explained in the attached diagram using a sample communication.
 
-[SampleCommunication.png](SampleCommunication.png)
+![SampleCommunication.png](SampleCommunication.png)
 
 AES-crypt in the given Image is:
 
