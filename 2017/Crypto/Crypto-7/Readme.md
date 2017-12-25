@@ -29,3 +29,16 @@ You have to break sample encryption and authentication system to capture the fla
 
 ## Write-up
 
+1. As mentioned in challenge statement, Diffie-hellman key exchange mechanism is used here. Serect in DH is g<sup>(ab)</sup> which can only be known if `a` and `b` are known to both parites. `a` and `b` are never exchanged in DH and only g<sup>a</sup>, g<sup>b</sup> are exchanged. 
+
+2. First step would be to find the secret value which is g<sup>(ab)</sup>. To find it following condition are given in challenge.
+
+* `Generator g<25 and 400<q<700`
+* `100 < a , b < 1500 and a + b = 2298`
+
+Now we need to bruteforce for the value of a and b to find g<sup>(ab)</sup>. 
+
+While writing the bruteforce it can be observed that both `a,b >= 799` because to achieve the addition `2298` if one parameter is maximum `1499` then other has to minimum `799`. 
+Therfore second codition could be modified to `798 < a , b < 1500 and a + b = 2298`
+
+## Python Program
