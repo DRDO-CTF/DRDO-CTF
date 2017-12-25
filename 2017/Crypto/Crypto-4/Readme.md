@@ -22,7 +22,7 @@ Figure out the hints and decrypt the message using a very basic encryption mecha
 
 *takE a breaK have some minTs, then find what Are hints*
 
-[pinaka.jpg](pinaka.jpg)
+![pinaka.jpg](pinaka.jpg)
 
 ## Write-up
 
