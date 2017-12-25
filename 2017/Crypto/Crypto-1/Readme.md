@@ -28,6 +28,8 @@ Therefore key is: ``NABHRATNA_{FLYWITHAIR}`` which is of exactly same lenght as 
 
 3. Now byteswise XOR of crypt message and key will result in the flag.
 
+## Python Program
+
 ```Python
 key = "NABHRATNA_{FLYWITHAIR}"
 crypt = "0A130607127764113A6A227416106F340B0E0D08155C".decode('hex')
