@@ -53,9 +53,13 @@ We can rewrite the hash function(Hash(x<sub>1</sub>,x<sub>2</sub>,x<sub>3</sub>,
 Lets assument any input string `s`, then
 
 1 <sup>st</sup> Byte of Hash : Hash(s<sub>1</sub>,s<sub>6</sub>,s<sub>8</sub>,...) mod `256`
+
 2 <sup>nd</sup> Byte of Hash : Hash(s<sub>2</sub>,s<sub>7</sub>,s<sub>9</sub>,...) mod `256`
+
 3 <sup>rd</sup> Byte of Hash : Hash(s<sub>3</sub>,s<sub>8</sub>,s<sub>10</sub>,...) mod `256`
+
 4 <sup>th</sup> Byte of Hash : Hash(s<sub>4</sub>,s<sub>9</sub>,s<sub>11</sub>,...) mod `256`
+
 5 <sup>th</sup> Byte of Hash : Hash(s<sub>5</sub>,s<sub>10</sub>,s<sub>12</sub>,...) mod `256`
 
 
