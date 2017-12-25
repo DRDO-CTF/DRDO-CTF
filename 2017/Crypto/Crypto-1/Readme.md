@@ -34,5 +34,6 @@ Therefore key is: ``NABHRATNA_{FLYWITHAIR}`` which is of exactly same length as 
 key = "NABHRATNA_{FLYWITHAIR}"
 crypt = "0A130607127764113A6A227416106F340B0E0D08155C".decode('hex')
 plain_hex = ''.join(hex(ord(a) ^ ord(b))[2:].zfill(2) for a,b in zip(key,crypt))
-bytearray.fromhex(plain_hex)
+plain_hex.decode('hex')
+#Output is 'DRDO@60_{5Y2ZI8}_FLAG!'
 ```
