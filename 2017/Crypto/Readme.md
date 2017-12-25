@@ -2,7 +2,8 @@
 
 ## Cryptography Challenges 
 
-**Easy (50 Points):** 
+**Easy (50 Points)** 
+
 Crypto-1
 
 Cryto-2
@@ -13,10 +14,12 @@ Crypto-4
 
 Crypto-5
 
-**Moderate (100 Points):** 
+**Moderate (100 Points)** 
+
 Crypto-6
 
-**Hard (200 Points):** 
+**Hard (200 Points)** 
+
 Crypto-7
 
 Crypto-8
