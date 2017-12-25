@@ -22,7 +22,7 @@ A message is intercepted with 3 keys. Without knowing the algorithm it became im
 
 2. Order of key in the challenges is not same as it was used for encryption/decryption. Therefore you need to try all possible combination. There are 6 possilbe combination (3x2x1) and you need to try each combination to get the plaintext. You can try these combinations at http://tripledes.online-domain-tools.com/ with CBC mode and all `00` IV. (CBC mode is one of the standard mode and if not specified IV is all `00`)
 
-3. After all try it is found that correct sequence of keys is `PRITHVI,AKASH,AGNI\_{KALAM}`. You can use this key to decrypt the CryptMessage (at http://tripledes.online-domain-tools.com/) and get the flag.
+3. After all try it is found that correct sequence of keys is `PRITHVI,AKASH,AGNI_{KALAM}`. You can use this key to decrypt the CryptMessage (at http://tripledes.online-domain-tools.com/) and get the flag.
 
 4. Flag is `DRDO@60_{OQ406H}_FLAG!`
 
