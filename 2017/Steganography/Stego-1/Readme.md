@@ -12,6 +12,6 @@
 
 An image (hidden.jpg) contains some useful information. You can find it by viewing differently and remembering that everything is in the title.
 
-[hidden.jpg](hidden.jpg)
+![hidden.jpg](hidden.jpg)
 
 ## Write-up
