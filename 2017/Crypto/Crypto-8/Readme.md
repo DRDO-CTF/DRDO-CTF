@@ -17,7 +17,7 @@ ClientKeyExchnage message contains an **encrypted PreMasterSecret which is encry
 ## Additional Information
 
 * TLS Version: 1.0
-* Server Private key: cyber\_challenge.key
+* Server Private key: cyber\_challenge.key (This file was not uploaded.)
 * PCAP: DecryptMe.pcapng
 * Key\_Block.JPG, Master\_Secret.JPG, PRF\_Phash.JPG and rfc2246.txt will help you to understand the protocol and decrypt the content.
 
@@ -36,6 +36,7 @@ Go to Wireshark->Analyze tab --> Decode As --> type port 1024 and select SSL pro
 
 [DecryptMe.pcapng](DecryptMe.pcapng)
 
+(Following file has the flag itself. It was uploaded by mistake.)
 [Problem\_8\_Hard.txt](Problem\_8\_Hard.txt)
 
 [rfc2246.txt](rfc2246.txt)
