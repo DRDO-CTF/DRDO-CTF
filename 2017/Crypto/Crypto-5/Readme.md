@@ -25,11 +25,11 @@ Hint: **Password Length < 15**
 
 2. Direct hint in the challenge is that password lenght is less than 15. Indirect hint, given in the challenge statement, is  `SPECIAL CHARACTER`. This means password consists of only special characters. 
 
-3. Now you need to brute force the password. 
+3. Now you need to bruteforce the password. 
 
 4. After sequentialy bruteforce you will find that password is of only 5 characters.(Designer wanted participants to write the program for bruteforce. If someone has implemented it then breaking 5 special characters password is easy).
 
-Password is : !^$@$
+Password is : `!^$@$`
 
 5. You can use this password to while decryping using RSA private key. Decrypted content is the flag
 
@@ -62,7 +62,9 @@ try:
                 continue
 except GotTheFlag:
     pass
-#output is 
+    
+#output is :
+
 #Checking Length: 1
 
 #Checking Length: 2
