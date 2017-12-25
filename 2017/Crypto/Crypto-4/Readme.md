@@ -16,7 +16,7 @@ If you know you Can fly, don’t ask who am i
 if you kNow it’s Kind of simple, **first even then odd sAmple**
 takE a breaK have some minTs, then find what Are hints
 
-[PINAKA.png](PINAKA.png)
+[PINAKA.png](PINAKA.jpg)
 
 ## Write-up
 
