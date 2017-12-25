@@ -48,9 +48,9 @@ String: The K-15 Sagarika is a nuclear-capable submarine-launched ballistic miss
 
 4. Now you have to find out what is hash function. As mentioned in the statement that hash function is a combination of addition/substraction/multiplication and there is specfic way to find everybyte of hash. (Some of participants got confuesd that operations used in hashfunction are different for each byte but then it was cleared that hash function operations are same of each byte)
 
-We can rewrite the hash function(H(x<sup>1</sup>,x<sup>2</sup>,x<sup>3</sup>,...)) as follows:
+We can rewrite the hash function(H(x<sub>1</sub>,x<sub>2</sub>,x<sub>3</sub>,...)) as follows:
 
-1<sup>st</sub> Byte of Hash : 
+1 <sup>st</sup> Byte of Hash : 
 
 
 ## Python Program
