@@ -22,7 +22,7 @@ A Commander got a **HEXADECIMAL** message and an image but doesn’t know how to
 
 2. Open the image in hex-editor. Last bytes in the image are key bytes.
 
-![hex\_key](hex_key)
+![hex\_key.png](hex_key.png)
 
 Therefore key is: ``NABHRATNA_{FLYWITHAIR}`` which is of exactly same lenght as the crypt-message.
 
