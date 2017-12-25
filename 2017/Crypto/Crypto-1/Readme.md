@@ -20,7 +20,7 @@ A Commander got a **HEXADECIMAL** message and an image but doesn’t know how to
 
 1. Perfect Secrecy means it is One-Time-Pad which is bascially byteswise XOR of key and plaintext.
 
-2. Open the image in hex-editor. Last bytes in the images are key bytes.
+2. Open the image in hex-editor. Last bytes in the image are key bytes.
 
 ![hex\_key](hex_key)
 
