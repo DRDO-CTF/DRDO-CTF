@@ -17,7 +17,7 @@ Unit A provides the flag as an input to the function (unit B also has this funct
 But in reality unit A captured the correct flag and sent it to unit B with 5-bytes hash-like output. Unit B received the flag and calculated the 5-byte hash and matched it with the received hash. It matched and unit B inputs the key to the system and surprisingly system destroys. 
 Diagram in the attachment depicts what happened: (Attacker changed **two characters of the flag(X,X) (case not changed)** such that **hash is still valid**) . Go ahead and find the complete flag.
 
-[Scenario.png](Scenario.png)
+![Scenario.png](Scenario.png)
 
 Details of Hash functions are as follows:
 Hash Function:
