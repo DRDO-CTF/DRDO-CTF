@@ -14,7 +14,7 @@ A Commander got a **HEXADECIMAL** message and an image but doesn’t know how to
 
 `Crypt-Message: 0A130607127764113A6A227416106F340B0E0D08155C`
 
-[NABHRATNA.png](NABHRATNA.png)
+![NABHRATNA.png](NABHRATNA.png)
 
 ## Write-up
 
