@@ -19,7 +19,7 @@ Additional Information:
 * TLS Version: 1.0
 * Server Private key: cyber_challenge.key
 * PCAP: DecryptMe.pcapng
-*``Key_Block.JPG, Master_Secret.JPG, PRF_Phash.JPG`` and rfc2246.txt will help you to understand the protocol and decrypt the content.
+*`Key_Block.JPG, Master_Secret.JPG, PRF_Phash.JPG` and rfc2246.txt will help you to understand the protocol and decrypt the content.
 
 
 Help:
