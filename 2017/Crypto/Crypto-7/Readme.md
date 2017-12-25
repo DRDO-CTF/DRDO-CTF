@@ -70,7 +70,7 @@ You can observe that whatever the value of a and b, g<sup>(ab)</sup> mod q is sa
 
 XOR will output: `431b40014c0652167a1a52064f004234` which is also the key for AES-128 decryption
 
-Now decrypt the given crypt using above key and all `00` IV (If not specified you should use IV all `00`)
+Now decrypt the given crypt using above key for AES-128 and all `00` IV (If not specified you should use IV all `00`)
 
 Decryption will output: `FLAG IS IN HMAC PROCESS|A_KEY:1B951B881FF16F9824F10AF41EF008BA0081138618E6||||||`
 
