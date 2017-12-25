@@ -3,6 +3,8 @@
 
 **Category:** Crypto
 
+**Level:** Easy
+
 **Points:** 50
 
 **Solves:** 59
