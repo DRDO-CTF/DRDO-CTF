@@ -40,3 +40,22 @@ String: The K-15 Sagarika is a nuclear-capable submarine-launched ballistic miss
 
 ## Write-up
 
+1. The challenge descibe a hash function which doesn't fullfil requirement and produces same hash for different input. 
+
+2. In the challenge statement partial flag is given, which is `DRDO@60_{A3X5X5}_FLAG!`, and missing two positions which are `X` needs to be find to get the complete flag.
+
+3. It is clear in the challenge statement that `X` positions have been changed and case not changed(it means only UPPERCASE are valid becase `X` is in uppercase). That means those two `X` must be replaced by any uppercase character from `A` to `Z`.
+
+4. Now you have to find out what is hash function. As mentioned in the statement that hash function is a combination of addition/substraction/multiplication and there is specfic way to find everybyte of hash. (Some of participants got confuesd that operations used in hashfunction are different for each byte but then it was cleared that hash function operations are same of each byte)
+
+We can rewrite the hash function(H(x<sup>1</sup>,x<sup>2</sup>,x<sup>3</sup>,...)) as follows:
+
+1<sup>st</sub> Byte of Hash : 
+
+
+## Python Program
+
+```Python
+#Hash Function
+
+```
