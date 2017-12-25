@@ -8,10 +8,11 @@
 
 **Description:**
 
+A Commander got a **HEXADECIMAL** message and an image but doesn’t know how to read it. He called a cryptographer and asked for help. The cryptographer solved it and said its **perfect secrecy**. Lets see if you can solve it.
 
-Breaking Brain
+`Crypt-Message: 0A130607127764113A6A227416106F340B0E0D08155C`
 
-[NABHRATNA.png](cryptopuzzle1.png)
+[NABHRATNA.png](NABHRATNA.png)
 
 ## Write-up
 
