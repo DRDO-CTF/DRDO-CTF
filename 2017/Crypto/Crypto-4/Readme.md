@@ -43,7 +43,7 @@ Key is `PINAKAROCKET`
 
 4. It is mentioned in the challenge statement that a basic encryption is used. Therefore, first choice would be XOR. As we know this time key length(12) is lesser than crypt message(22 bytes), we will repeat the key to match the length with crypt message.
 
-final key is `PINAKAROCKETPINAKAROCK`
+Final Key is `PINAKAROCKETPINAKAROCK`
 
 5. Now, XOR of final key and the crypt message will result in the flag. 
 
