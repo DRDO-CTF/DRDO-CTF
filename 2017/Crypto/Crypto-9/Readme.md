@@ -14,6 +14,10 @@ Early CCS or CCS Injection is a vulnerability which was discovered in OpenSSL in
 Due to its early acceptance of CCS message **keys are not exchanged but encryption starts** and client sends an encrypted ClientKeyExchange message. This encrypted ClientKeyExchange message is similar to plain ClientKeyExchange message but it is encrypted due to early acceptance of CCS message. 
 ClientKeyExchnage message contains an **encrypted PreMasterSecret which is encrypted using RSA-2048 public key**. Decrypt the contents to attached file of capture the FLAG.
 
+### HINT
+
+You have to get the PreMasterSecret to capture the FLAG. 
+
 ## Additional Information
 
 * TLS Version: 1.0
