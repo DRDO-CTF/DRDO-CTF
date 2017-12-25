@@ -28,12 +28,12 @@ Help:
 
 Online Resources:
 
-*Internet Search: “CCS Injection”, CVE-2014-0224
-*TLS 1.0 RFC: https://www.ietf.org/rfc/rfc2246.txt
+* Internet Search: “CCS Injection”, CVE-2014-0224
+* TLS 1.0 RFC: https://www.ietf.org/rfc/rfc2246.txt
 
 [DecryptMe.pcapng](DecryptMe.pcapng)
 
-[Problem_8_Hard.txt] (Problem_8_Hard.txt)
+[``Problem_8_Hard.txt``] (``Problem_8_Hard.txt``)
 
 [rfc2246.txt] (rfc2246.txt)
 
