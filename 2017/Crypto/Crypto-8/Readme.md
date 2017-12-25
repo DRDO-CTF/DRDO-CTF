@@ -24,7 +24,8 @@ Additional Information:
 
 Help:
 * In wireshark to see the captured packets as TLS message for port 1024:
-..Go to Wireshark->Analyze tab --> Decode As --> type port 1024 and select SSL protocol. Now it will show packets as SSL/TLS Messages from the port 1024
+
+Go to Wireshark->Analyze tab --> Decode As --> type port 1024 and select SSL protocol. Now it will show packets as SSL/TLS Messages from the port 1024
 
 Online Resources:
 
@@ -33,15 +34,15 @@ Online Resources:
 
 [DecryptMe.pcapng](DecryptMe.pcapng)
 
-[Problem\_8\_Hard.txt] (Problem\_8\_Hard.txt)
+[Problem\_8\_Hard.txt](Problem\_8\_Hard.txt)
 
-[rfc2246.txt] (rfc2246.txt)
+[rfc2246.txt](rfc2246.txt)
 
-![``Key_Block.JPG``] (``Key_Block.JPG``)
+![Key\_Block.JPG](Key\_Block.JPG)
 
-![``Master_Secret.JPG``] (``Master_Secret.JPG``)
+![Master\_Secret.JPG](Master\_Secret.JPG)
 
-![``PRF_PHash.JPG``] (``PRF_PHash.JPG``)
+![PRF\_PHash.JPG](PRF\_PHash.JPG)
 
 
 ## Write-up
