@@ -1,6 +1,6 @@
 # DRDO CTF 2017 : ReverseEngg-1
 
-**Category:** ReverseEngineering
+**Category:** Reverse Engineering
 
 **Level:** Easy
 
