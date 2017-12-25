@@ -68,32 +68,32 @@ You have to break sample encryption and authentication system to capture the fla
 
 3. Now you need to XOR `329` with random `BRAHMOS_{SSNOIC}`. To do that you need to find hex of `329`, which is `0149`(two bytes) and XOR with every two bytes of given random. The output will be the key for AES-128 decryption.
 
-XOR will output: `431b40014c0652167a1a52064f004234` which is also the key for AES-128 decryption
+   XOR will output: `431b40014c0652167a1a52064f004234` which is also the key for AES-128 decryption
 
-Now decrypt the given crypt using above key for AES-128 and all `00` IV (If not specified you should use IV all `00`)
+   Now decrypt the given crypt using above key for AES-128 and all `00` IV (If not specified you should use IV all `00`)
 
-Decryption will output: `FLAG IS IN HMAC PROCESS|A_KEY:1B951B881FF16F9824F10AF41EF008BA0081138618E6||||||`
+   Decryption will output: `FLAG IS IN HMAC PROCESS|A_KEY:1B951B881FF16F9824F10AF41EF008BA0081138618E6||||||`
 
-The decrption give the hint that **flag is in the process of HMAC** (some participants confused it with 'Flag is in HMAC').
+   The decrption give the hint that **flag is in the process of HMAC** (some participants confused it with 'Flag is in HMAC').
 
-**A\_KEY will be used to derive HMAC key which will be used for HMAC calculations.**
+   **A\_KEY will be used to derive HMAC key which will be used for HMAC calculations.**
 
 4. Now to proceed with HMAC we need to find HMAC key which is derived from A\_KEY as mentioned in the diagram.
 You need to reverse the secret(`329`) which will be `923` and XOR hex of `923`(039b) with given random `BRAHMOS_{SSNOIC}`. 
 The output will be HMAC key which will be used for furhter calucaltions.
 
-XOR will output: `180e18131c6a6c03276a096f1d6b0b21031a101d1b7d` which is HMAC Key
+   XOR will output: `180e18131c6a6c03276a096f1d6b0b21031a101d1b7d` which is HMAC Key
 
 5. Now as the hint was given that flag is in HMAC process, it means we need to obsever HMAC process.
 
-![HMAC\_Process.png](HMAC\_Process.png)
+   ![HMAC\_Process.png](HMAC\_Process.png)
 
-It is clear from above diagram that they HMAC key is XORed with two fixed byte arrays called o\_pad and i\_pad. Lets try the first one which is o\_pad. 
+   It is clear from above diagram that they HMAC key is XORed with two fixed byte arrays called o\_pad and i\_pad. Lets try  the first one which is o\_pad. 
 
-o\_pad is `5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c` 
-HAMC Key is `180e18131c6a6c03276a096f1d6b0b21031a101d1b7d`
+   o\_pad is `5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c` 
+   HAMC Key is `180e18131c6a6c03276a096f1d6b0b21031a101d1b7d`
 
-XOR will output `464c41475f7b593442354e317d5f4341505455524544` which is `DRDO@60_{6U3A7W}_FLAG!`
+   XOR will output `464c41475f7b593442354e317d5f4341505455524544` which is `DRDO@60_{6U3A7W}_FLAG!`
 
 5. Flag is `DRDO@60_{6U3A7W}_FLAG!`
 
