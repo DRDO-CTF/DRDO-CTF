@@ -24,7 +24,7 @@ A Commander got a **HEXADECIMAL** message and an image but doesn’t know how to
 
 ![hex\_key.png](hex_key.png)
 
-Therefore key is: ``NABHRATNA_{FLYWITHAIR}`` which is of exactly same lenght as the crypt-message.
+Therefore key is: ``NABHRATNA_{FLYWITHAIR}`` which is of exactly same length as the crypt-message.
 
 3. Now byteswise XOR of crypt message and key will result in the flag.
 
