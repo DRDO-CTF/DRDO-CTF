@@ -91,9 +91,7 @@ You have 5 chances to verify correct pair and you have only 4 options. You need 
 ```Python
 #Hash Function
 
-import sys
-
-input_string = sys.argv[1]
+input_string = "DRDO@60_{A4Z3V5}_FLAG!"
 #for i in range(0,len(input_string)):
 #    print "Integer Value for " + str(i) + " Character " + input_string[i]  + " is " + str(ord(input_string[i])) + "\n"
 first_byte = ord(input_string[0])
