@@ -55,7 +55,7 @@ Go to Wireshark->Analyze tab --> Decode As --> type port 1024 and select SSL pro
 
 2. **For those who doesn't know about TLS:** 
 
-(You can refer to http://blog.catchpoint.com/2017/05/12/dissecting-tls-using-wireshark/ for summary)
+   (You can refer to http://blog.catchpoint.com/2017/05/12/dissecting-tls-using-wireshark/ for summary)
 
 * TLS is `Transport Layer Secryity` which is used world wide to provide secure communication between the devices. Internet is one of the major infrastructure which uses the TLS. All `https` connections use TLS protocol. SSL `Secure Socket Layer` was predecessor of TLS. TLS started with version 1.0 and then upgraded to 1.1 and then to 1.2. TLS 1.3 is still in draft but has been already implemented by most of the libraries. 
 
@@ -71,7 +71,7 @@ Go to Wireshark->Analyze tab --> Decode As --> type port 1024 and select SSL pro
 
 * `ClientKeyExchange` contains a valuale information, called `PreMasterSecret`, which is a secret parameter sent from client to the server. To ensure the secrecy `PreMasterSecret` is encrypted with RSA public key and sent to the server. 
 
-Following diagram shows a general structure of `ClientKeyExchange` message for RSA based KeyExchange. 
+   Following diagram shows a general structure of `ClientKeyExchange` message for RSA based KeyExchange. 
 
 ![ClientKeyExchange.png](ClientKeyExchange.png)
 
