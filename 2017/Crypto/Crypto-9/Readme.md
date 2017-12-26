@@ -57,6 +57,8 @@ Go to Wireshark->Analyze tab --> Decode As --> type port 1024 and select SSL pro
 
 * TLS is `Transport Layer Secryity` which is used world wide to provide secure communication between the devices. Internet is one of the major infrastructure which uses the TLS. All `https` connections use TLS protocol. SSL `Secure Socket Layer` was predecessor of TLS. TLS started with version 1.0 and then upgraded to 1.1 and then to 1.2. TLS 1.3 is still in draft but has been already implemented by most of the libraries. 
 
-* TLS communication can be divided in two parts. First part is handsahke where both the parties agree on common available parameters like KeyExchangeMechanim, DataEncryptionAlgorithm, HashFunction etc. Once both parties agrees and exchange required paramter, encrypted commuincation starts. 
+* TLS communication can be divided in two parts. First part is handsahke where both the parties agree on common available parameters like KeyExchangeMechanim, DataEncryptionAlgorithm, HashFunction etc. Once both parties agrees and exchange required paramters, encrypted commuincation starts. Following Diagram depicts the hanshake process:
+
+![TLS\_Handshake.png](TLS\_Handshake.png)
 
 ## Python Program
