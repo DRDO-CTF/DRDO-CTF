@@ -53,12 +53,25 @@ Go to Wireshark->Analyze tab --> Decode As --> type port 1024 and select SSL pro
 
 1. This challenges was more focused on implementing the given process rather than finding the process. It was clearly mentioned that the traffic given was affected by early CCS and due to which ClientKeyExchange handshake message got encrypted . Therefore, the task was to decrypt the ClientKeyExchange message and get the RSA encrypted PreMasterSecret and then decrypt it using given RSA private Key.
 
-2. For those who doesn't know about TLS:
+2. For those who doesn't know about TLS: (You can refer to http://blog.catchpoint.com/2017/05/12/dissecting-tls-using-wireshark/ for a summary)
 
 * TLS is `Transport Layer Secryity` which is used world wide to provide secure communication between the devices. Internet is one of the major infrastructure which uses the TLS. All `https` connections use TLS protocol. SSL `Secure Socket Layer` was predecessor of TLS. TLS started with version 1.0 and then upgraded to 1.1 and then to 1.2. TLS 1.3 is still in draft but has been already implemented by most of the libraries. 
 
-* TLS communication can be divided in two parts. First part is handsahke where both the parties agree on common available parameters like KeyExchangeMechanim, DataEncryptionAlgorithm, HashFunction etc. Once both parties agrees and exchange required paramters, encrypted commuincation starts. Following Diagram depicts the hanshake process:
+* TLS communication can be divided in two parts. First part is handsahke where both the parties agree on common available parameters like KeyExchangeMechanim, DataEncryptionAlgorithm, HashFunction etc. Once both parties agrees and exchange required paramters, encrypted commuincation starts.
+
+Following Diagram depicts the hanshake process:
 
 ![TLS\_Handshake.png](TLS\_Handshake.png)
 
+
+* You can see in the daigram that except `Finish` message, all messages of handshake are in plain. Data encrption starts when
+`Finish` message exchange is complete. 
+
+* `ClientKeyExchange` contains a valuale information, called `PreMasterSecret`, which is a secret parameter sent from client to the server. To ensure the secrecy `PreMasterSecret` is encrypted with RSA public key and sent to the server. 
+
+Following diagram shows a general structure of `ClientKeyExchange` message for RSA based KeyExchange. 
+
+![ClientKeyExchange.png](ClientKeyExchange.png)
+
+You can see that `PreMasterSecret` is encrypted with RSA public key.
 ## Python Program
