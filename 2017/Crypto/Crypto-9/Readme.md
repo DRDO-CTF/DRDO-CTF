@@ -93,9 +93,9 @@ Go to Wireshark->Analyze tab --> Decode As --> type port 1024 and select SSL pro
 
 ![ServerHello.png](ServerHello.png)
 
-7. After decrypting encrypted `ClientKeyExchange`, you will get the plain `ClientKeyExchange` with similar structure we have mentioned in step 2. From there you can extract encrypted `PreMasterSecret` and decrypt it using given RSA private key called `cyber_challenge.key`.
+7. After decrypting encrypted `ClientKeyExchange`, you will get the plain `ClientKeyExchange` with similar structure we have mentioned in step 2. From there you can extract encrypted `PreMasterSecret` and decrypt it using given RSA private key called `cyber_challenge.key`. (You can use `openssl rsautl` for decryption)
 
-   `PreMasterSecret`(hex) is : `000301212121594f555f484156455f464f554e445f49542121214452444f4036305f7b48375a3330517d5f464c414721`
+   `PreMasterSecret`(hex) is : `0301212121594f555f484156455f464f554e445f49542121214452444f4036305f7b48375a3330517d5f464c414721`
    
    `PreMasterSecret`(Plain) is : `!!!YOU_HAVE_FOUND_IT!!!DRDO@60_{H7Z30Q}_FLAG!`
    
@@ -192,7 +192,7 @@ enc_pms = plain_text.encode('hex')[12:-52]
 dec_pms=key.decrypt(bytes(bytearray.fromhex(enc_pms)))
 #print dec_pms
 print "Hex of Decrypted PMS is: " + dec_pms.encode('hex')
-print "Decrypted PMS is: " + dec_pms.encode('hex')[-96:]
+print "Decrypted PMS is: " + dec_pms.encode('hex')[-94:]
 print "Flag is: "+ dec_pms[-46:]
 #output is : Flag is: !!!YOU_HAVE_FOUND_IT!!!DRDO@60_{H7Z30Q}_FLAG!
 ```
