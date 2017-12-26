@@ -98,6 +98,8 @@ Following diagram shows a general structure of `ClientKeyExchange` message for R
    `PreMasterSecret`(hex) is : `000301212121594f555f484156455f464f554e445f49542121214452444f4036305f7b48375a3330517d5f464c414721`
    
    `PreMasterSecret`(Plain) is : `!!!YOU_HAVE_FOUND_IT!!!DRDO@60_{H7Z30Q}_FLAG!`
+   
+8.  Flag is : `DRDO@60_{H7Z30Q}_FLAG!`
 
 ## Python Program
 
