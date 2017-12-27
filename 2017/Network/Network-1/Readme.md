@@ -17,3 +17,10 @@ Hacker is relatively inexperienced in network traffic analysis. Please help him 
 
 ## Write-up
 
+1. Opem `dump.pcap` file in wireshark (https://www.wireshark.org/). 
+
+2. Go to packet No. 204 and you will HTTP POST request which contains the password
+
+![post.JPG](post.JPG)
+
+3. Flag is : `DRDO@60_{UVR2461GA}_FLAG!`
