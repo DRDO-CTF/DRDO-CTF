@@ -33,7 +33,6 @@ The above disassembly clearly shows the flag calculation. The hex values are sto
 
 ```python
 flag_chars = ['D', 'R', 'D', 'O', '@', '6']
-b = bytearray()
 
 # The following values can be obtained from binary
 enc = [0x5596, 0x4f43, 0x3659]#, 0x58e2, 0x377c, 0x6d38, 0x30e1, 0x4075, 0x336f, 0x7abe, 0x4658, 0x4155, 0x2695]
