@@ -6,9 +6,9 @@
 
 Crypto-1
 
-Cryto-2
+Crypto-2
 
-Cryto-3
+Crypto-3
 
 Crypto-4
 

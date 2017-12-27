@@ -40,3 +40,81 @@ String: The K-15 Sagarika is a nuclear-capable submarine-launched ballistic miss
 
 ## Write-up
 
+1. The challenge descibe a hash function which doesn't fullfil requirement and produces same hash for different input. 
+
+2. In the challenge statement partial flag is given, which is `DRDO@60_{A4X3X5}_FLAG!`, and missing two positions which are `X` needs to be find to get the complete flag.
+
+3. It is clear in the challenge statement that `X` positions have been changed and case not changed(it means only UPPERCASE are valid becase `X` is in uppercase). That means those two `X` must be replaced by any uppercase character from `A` to `Z`.
+
+4. Now you have to find out what is hash function. As mentioned in the statement that hash function is a combination of addition/substraction/multiplication and there is specfic way to find everybyte of hash. (Some of participants got confuesd that operations used in hashfunction are different for each byte but then it was cleared that hash function operations are same of each byte)
+
+We can rewrite the hash function(Hash(x<sub>1</sub>,x<sub>2</sub>,x<sub>3</sub>,...); x<sub>i</sub> is i<sup>th</sup> byte of string `x`) as follows:
+
+Lets assument any input string `s`, then
+
+1 <sup>st</sup> Byte of Hash : Hash(s<sub>1</sub>,s<sub>6</sub>,s<sub>8</sub>,...) mod `256`
+
+2 <sup>nd</sup> Byte of Hash : Hash(s<sub>2</sub>,s<sub>7</sub>,s<sub>9</sub>,...) mod `256`
+
+3 <sup>rd</sup> Byte of Hash : Hash(s<sub>3</sub>,s<sub>8</sub>,s<sub>10</sub>,...) mod `256`
+
+4 <sup>th</sup> Byte of Hash : Hash(s<sub>4</sub>,s<sub>9</sub>,s<sub>11</sub>,...) mod `256`
+
+5 <sup>th</sup> Byte of Hash : Hash(s<sub>5</sub>,s<sub>10</sub>,s<sub>12</sub>,...) mod `256`
+
+Now to find the Hash() you need to take help of given sample input strings and output hashes. If analysed properly you will find Hash() is just an addition operator. So, you can replace Hash() with Add().
+
+5. Now you have figured it out that hash is just addition of given bytes then modulo 256. Now you have to examine the parital flag given to you. 
+
+Partial Flag is : `DRDO@60_{A4X3X5}_FLAG!` 
+
+If you examine closely both `X` are alternate to each other that means while calculating the hash function either both `X` will use used or no `X` will be used because of propertly of hash bytes specified in challenge statement. 
+
+Decimal(ASCII) value of `X` is `88` and while calculating the `X` + `X` = `176`. Now you need to find two characters from `A` to `Z` such that addition of ASCII decimal of both characters gives `176`. 
+
+You can easily verify that only options are:
+
+* (W,Y) : `87` + `89` = `176`
+
+* (Y,W) : `89` + `87` = `176`
+
+* (V,Z) : `86` + `90` = `176`
+
+* (Z,V) : `90` + `86` = `176`
+
+You have 5 chances to verify correct pair and you have only 4 options. You need to submit the flag and check each option.
+
+6. Flag is : `DRDO@60_{A4Z3V5}_FLAG!`
+
+## Python Program
+
+```Python
+#Hash Function
+
+input_string = "DRDO@60_{A4Z3V5}_FLAG!"
+#for i in range(0,len(input_string)):
+#    print "Integer Value for " + str(i) + " Character " + input_string[i]  + " is " + str(ord(input_string[i])) + "\n"
+first_byte = ord(input_string[0])
+for i in range(5,len(input_string),2):
+    first_byte = first_byte + ord(input_string[i])
+
+second_byte = ord(input_string[1])
+for i in range(6,len(input_string),2):
+    second_byte = second_byte + ord(input_string[i])
+    
+third_byte = ord(input_string[2])
+for i in range(7,len(input_string),2):
+    third_byte = third_byte + ord(input_string[i])
+    
+forth_byte = ord(input_string[3])
+for i in range(8,len(input_string),2):
+    forth_byte = forth_byte + ord(input_string[i])
+    
+fifth_byte = ord(input_string[4])
+for i in range(9,len(input_string),2):
+    fifth_byte = fifth_byte + ord(input_string[i])
+
+Hash = str(hex(first_byte%256))[2:] + str(hex(second_byte%256))[2:] + str(hex(third_byte%256))[2:] + str(hex(forth_byte%256))[2:] + str(hex(fifth_byte%256))[2:]
+print "5-Byte Hash of input string is: " + Hash
+#output is : ef8bb95856
+```
