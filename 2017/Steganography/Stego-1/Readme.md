@@ -20,6 +20,6 @@ An image (hidden.jpg) contains some useful information. You can find it by viewi
 
 2. Scroll down a little and after sequence of may `00` you will find the string `DRDO@60_{435VGDIQY}_FLAG!`
 
-![flag.jpg](flag.jpg)
+![flag.JPG](flag.JPG)
 
 3. Flag is : `DRDO@60_{435VGDIQY}_FLAG!`
