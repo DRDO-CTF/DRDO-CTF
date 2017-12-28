@@ -57,7 +57,7 @@
 >>* (W,Y) : `87` + `89` = `176`<br/>
 >>* (Y,W) : `89` + `87` = `176`<br/>
 >>* (V,Z) : `86` + `90` = `176`<br/>
->>* (Z,V) : `90` + `86` = `176`<br/><br/>
+>>* (Z,V) : `90` + `86` = `176`<br/>
 >You have 5 chances to verify correct pair and you have only 4 options. You need to submit the flag and check each option.<br/>
 >6. Flag is : `DRDO@60_{A4Z3V5}_FLAG!`<br/>
 
