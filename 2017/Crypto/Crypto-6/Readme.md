@@ -24,15 +24,15 @@
 >3rd Byte: Addition/substraction/multiplication of following bytes of input string: 3,8,10,12,14… mod 256
 >4th Byte: Addition/substraction/multiplication of following bytes of input string: 4,9,11,13,15… mod 256
 >5th Byte: Addition/substraction/multiplication of following bytes of input string: 5,10,12,14,16… mod 256
-```
-Sample Hash Output:<br/>
-```
-String: The Agni ballistic missiles are a range of MRBMs, IRBMs, ICBMs meant for long-range deterrence. Hash: 3EBAD3520
-String: The Trishul is a short range surface-to-air missile developed by India. Hash: BF2C5E7BDA
-String: The Nag Anti-tank missile is a guided missile system intended for the Indian Air Force and the Indian Army. Hash: B45664A72D
-String: The Shaurya missile is a canister-launched hypersonic surface-to-surface tactical missile developed by DRDO. Hash: 54C7FD1E76
-String: The K-15 Sagarika is a nuclear-capable submarine-launched ballistic missile with a range of 750 kilometres. Hash: FE1CE2A393
-```
+>```
+>Sample Hash Output:<br/>
+>```
+>String: The Agni ballistic missiles are a range of MRBMs, IRBMs, ICBMs meant for long-range deterrence. Hash: 3EBAD3520
+>String: The Trishul is a short range surface-to-air missile developed by India. Hash: BF2C5E7BDA
+>String: The Nag Anti-tank missile is a guided missile system intended for the Indian Air Force and the Indian Army. Hash: B45664A72D
+>String: The Shaurya missile is a canister-launched hypersonic surface-to-surface tactical missile developed by DRDO. Hash: 54C7FD1E76
+>String: The K-15 Sagarika is a nuclear-capable submarine-launched ballistic missile with a range of 750 kilometres. Hash: FE1CE2A393
+>```
 
 
 ## Write-up
