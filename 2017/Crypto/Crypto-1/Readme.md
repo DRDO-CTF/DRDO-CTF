@@ -18,15 +18,15 @@ A Commander got a **HEXADECIMAL** message and an image but doesn’t know how to
 
 ## Write-up
 
-1. Perfect Secrecy means it is One-Time-Pad which is bascially byteswise XOR of key and plaintext.
+>1. Perfect Secrecy means it is One-Time-Pad which is bascially byteswise XOR of key and plaintext.
 
-2. Open the image in hex-editor. Last bytes in the image are key bytes.
+>2. Open the image in hex-editor. Last bytes in the image are key bytes.
 
-![hex\_key.png](hex_key.png)
+>![hex\_key.png](hex_key.png)
 
-Therefore key is: ``NABHRATNA_{FLYWITHAIR}`` which is of exactly same length as the crypt-message.
+>Therefore key is: ``NABHRATNA_{FLYWITHAIR}`` which is of exactly same length as the crypt-message.
 
-3. Now byteswise XOR of crypt message and key will result in the flag.
+>3. Now byteswise XOR of crypt message and key will result in the flag.
 
 ## Python Program
 
