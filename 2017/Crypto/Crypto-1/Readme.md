@@ -22,7 +22,7 @@
 >![hex\_key.png](hex_key.png)<br/>
 >Therefore key is: ``NABHRATNA_{FLYWITHAIR}`` which is of exactly same length as the crypt-message.<br/>
 >3. Now byteswise XOR of crypt message and key will result in the flag.<br/>
-
+>4. Flag is : `DRDO@60_{5Y2ZI8}_FLAG!`
 ## Python Program
 
 ```Python
