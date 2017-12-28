@@ -18,7 +18,7 @@
 >Although system was secure but due to use of weak parameters it is possible to break the system. Analysis of system revealed following weaknesses:<br/>
 >>1. `Generator g<25 and 400<q<700`<br/>
 >>2. `100 < a , b < 1500 and a + b = 2298`<br/>
->You have to break sample encryption and authentication system to capture the flag. Move ahead **Step by Step**.<br/>
+<You have to break sample encryption and authentication system to capture the flag. Move ahead **Step by Step**.<br/>
 
 
 ## Write-up
