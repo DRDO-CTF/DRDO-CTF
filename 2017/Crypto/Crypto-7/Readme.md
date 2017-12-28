@@ -29,10 +29,10 @@
 >>* `Generator g<25 and 400<q<700`<br/>
 >>* `100 < a , b < 1500 and a + b = 2298`<br/>
 
->Now we need to bruteforce for the value of a and b to find g<sup>(ab)</sup>. <br/>
->While writing the bruteforce it can be observed that both `a,b >= 799` because to achieve the addition `2298` if one    parameter is maximum `1499` then other has to minimum `799`. <br/>
->   Therfore second codition could be modified to `798 < a , b < 1500 and a + b = 2298`<br/>
->   If you bruteforce in the given range of values you will find follwing set of parameter satisfying the mentioned conditions.<br/>
+>>Now we need to bruteforce for the value of a and b to find g<sup>(ab)</sup>. <br/>
+>>While writing the bruteforce it can be observed that both `a,b >= 799` because to achieve the addition `2298` if one    parameter is maximum `1499` then other has to minimum `799`. <br/>
+>>   Therfore second codition could be modified to `798 < a , b < 1500 and a + b = 2298`<br/>
+>>   If you bruteforce in the given range of values you will find follwing set of parameter satisfying the mentioned conditions.<br/>
 
 >|Sl|g|q|a|b|g<sup>(ab)</sup> mod q|
 >| ----:|:---------:| -----:|----:|----:|----:|
