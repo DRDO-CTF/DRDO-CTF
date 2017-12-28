@@ -24,15 +24,15 @@
 
 ## Write-up
 
->1. As mentioned in challenge statement, Diffie-hellman key exchange mechanism is used here. Serect in DH is g<sup>(ab)</sup> which can only be known if `a` and `b` are known to both parites. `a` and `b` are never exchanged in DH and only g<sup>a</sup>, g<sup>b</sup> are exchanged. <br/>
->2. First step would be to find the secret value which is g<sup>(ab)</sup>. To find it following condition are given in challenge.<br/>
->>* `Generator g<25 and 400<q<700`<br/>
->>* `100 < a , b < 1500 and a + b = 2298`<br/>
+1. As mentioned in challenge statement, Diffie-hellman key exchange mechanism is used here. Serect in DH is g<sup>(ab)</sup> which can only be known if `a` and `b` are known to both parites. `a` and `b` are never exchanged in DH and only g<sup>a</sup>, g<sup>b</sup> are exchanged. <br/>
+2. First step would be to find the secret value which is g<sup>(ab)</sup>. To find it following condition are given in challenge.<br/>
+* `Generator g<25 and 400<q<700`<br/>
+* `100 < a , b < 1500 and a + b = 2298`<br/>
 
->>Now we need to bruteforce for the value of a and b to find g<sup>(ab)</sup>. <br/>
->>While writing the bruteforce it can be observed that both `a,b >= 799` because to achieve the addition `2298` if one    parameter is maximum `1499` then other has to minimum `799`. <br/>
->>   Therfore second codition could be modified to `798 < a , b < 1500 and a + b = 2298`<br/>
->>   If you bruteforce in the given range of values you will find follwing set of parameter satisfying the mentioned conditions.<br/>
+Now we need to bruteforce for the value of a and b to find g<sup>(ab)</sup>. <br/>
+While writing the bruteforce it can be observed that both `a,b >= 799` because to achieve the addition `2298` if one    parameter is maximum `1499` then other has to minimum `799`. <br/>
+   Therfore second codition could be modified to `798 < a , b < 1500 and a + b = 2298`<br/>
+   If you bruteforce in the given range of values you will find follwing set of parameter satisfying the mentioned conditions.<br/>
 
 >|Sl|g|q|a|b|g<sup>(ab)</sup> mod q|
 >| ----:|:---------:| -----:|----:|----:|----:|
@@ -54,31 +54,24 @@
 >|16|23|654|1439|859|329|
 >|17|23|654|1475|823|329|
 <br/>
->   You can observe that whatever the value of a and b, g<sup>(ab)</sup> mod q is same which is `329` and this is our secret value.<br/>
+   You can observe that whatever the value of a and b, g<sup>(ab)</sup> mod q is same which is `329` and this is our secret value.<br/>
 
->3. Now you need to XOR `329` with random `BRAHMOS_{SSNOIC}`. To do that you need to find hex of `329`, which is `0149`(two bytes) and XOR with every two bytes of given random. The output will be the key for AES-128 decryption.<br/>
->   XOR will output: `431b40014c0652167a1a52064f004234` which is also the key for AES-128 decryption<br/>
->   Now decrypt the given crypt using above key for AES-128 and all `00` IV (If not specified you should use IV all `00`)<br/>
->   Decryption will output: `FLAG IS IN HMAC PROCESS|A_KEY:1B951B881FF16F9824F10AF41EF008BA0081138618E6||||||`<br/>
->   The decrption give the hint that **flag is in the process of HMAC** (some participants confused it with 'Flag is in HMAC').<br/>
->   **A\_KEY will be used to derive HMAC key which will be used for HMAC calculations.**<br/>
->4. Now to proceed with HMAC we need to find HMAC key which is derived from A\_KEY as mentioned in the diagram.
->You need to reverse the secret(`329`) which will be `923` and XOR hex of `923`(039b) with given random `BRAHMOS_{SSNOIC}`. 
->The output will be HMAC key which will be used for furhter calucaltions.<br/>
-
+3. Now you need to XOR `329` with random `BRAHMOS_{SSNOIC}`. To do that you need to find hex of `329`, which is `0149`(two bytes) and XOR with every two bytes of given random. The output will be the key for AES-128 decryption.<br/>
+   XOR will output: `431b40014c0652167a1a52064f004234` which is also the key for AES-128 decryption<br/>
+   Now decrypt the given crypt using above key for AES-128 and all `00` IV (If not specified you should use IV all `00`)<br/>
+   Decryption will output: `FLAG IS IN HMAC PROCESS|A_KEY:1B951B881FF16F9824F10AF41EF008BA0081138618E6||||||`<br/>
+   The decrption give the hint that **flag is in the process of HMAC** (some participants confused it with 'Flag is in HMAC').<br/>
+   **A\_KEY will be used to derive HMAC key which will be used for HMAC calculations.**<br/>
+4. Now to proceed with HMAC we need to find HMAC key which is derived from A\_KEY as mentioned in the diagram.
+You need to reverse the secret(`329`) which will be `923` and XOR hex of `923`(039b) with given random `BRAHMOS_{SSNOIC}`. 
+The output will be HMAC key which will be used for furhter calucaltions.<br/>
    XOR will output: `180e18131c6a6c03276a096f1d6b0b21031a101d1b7d` which is HMAC Key<br/>
-
 5. Now as the hint was given that flag is in HMAC process, it means we need to obsever HMAC process.<br/>
-
    ![HMAC\_Process.png](HMAC\_Process.png)<br/>
-
    It is clear from above diagram that they HMAC key is XORed with two fixed byte arrays called o\_pad and i\_pad. Lets try  the first one which is o\_pad. <br/>
-
-   o\_pad is `5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c` <br/>
-   HAMC Key is `180e18131c6a6c03276a096f1d6b0b21031a101d1b7d`<br/>
-
-   XOR will output `464c41475f7b593442354e317d5f4341505455524544` which is `DRDO@60_{6U3A7W}_FLAG!`<br/>
-
+>   o\_pad is `5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c5c` <br/>
+>   HAMC Key is `180e18131c6a6c03276a096f1d6b0b21031a101d1b7d`<br/>
+>   XOR will output `464c41475f7b593442354e317d5f4341505455524544` which is `DRDO@60_{6U3A7W}_FLAG!`<br/>
 5. Flag is `DRDO@60_{6U3A7W}_FLAG!`<br/>
 
  ## Python Program
