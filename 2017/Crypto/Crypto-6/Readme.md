@@ -13,12 +13,9 @@
 >Unit B captured a system having many classified information. A flag works as a key to that system. <br/>
 >Any wrong key can destroy the system without extracting information. Unit A captured the flag and sent to Unit B so that unit B breaks the system immediately. As there was a chance that key can be tampered in between therefore unit A used a hash-like function (for integrity check) which outputs **5 bytes** for any input. <br/>
 >Unit A provides the flag as an input to the function (unit B also has this function) and gets a 5 byte output. Unit A sends this 5 byte output to unit B so that unit B can verify that flag received by it was the correct one. In case the 5 bytes mismatch occurs unit B will not use the key and will request to resend the key.<br/>
-
 >But in reality unit A captured the correct flag and sent it to unit B with 5-bytes hash-like output. Unit B received the flag and calculated the 5-byte hash and matched it with the received hash. It matched and unit B inputs the key to the system and surprisingly system destroys. <br/>
 >Diagram in the attachment depicts what happened: (Attacker changed **two characters of the flag(X,X) (case not changed)** such that **hash is still valid**) . Go ahead and find the complete flag.<br/>
-
 >![Scenario.png](Scenario.png)<br/>
-
 >Details of Hash functions are as follows:<br/>
 >Hash Function:<br/>
 ```
