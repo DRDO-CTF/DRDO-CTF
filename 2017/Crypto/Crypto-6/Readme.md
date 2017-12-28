@@ -43,11 +43,13 @@
 >4. Now you have to find out what is hash function. As mentioned in the statement that hash function is a combination of addition/substraction/multiplication and there is specfic way to find everybyte of hash. (Some of participants got confuesd that operations used in hashfunction are different for each byte but then it was cleared that hash function operations are same of each byte)<br/>
 >We can rewrite the hash function(Hash(x<sub>1</sub>,x<sub>2</sub>,x<sub>3</sub>,...); x<sub>i</sub> is i<sup>th</sup> byte of string `x`) as follows:<br/>
 >Lets assument any input string `s`, then<br/>
->>1 <sup>st</sup> Byte of Hash : Hash(s<sub>1</sub>,s<sub>6</sub>,s<sub>8</sub>,...) mod `256`<br/>
->>2 <sup>nd</sup> Byte of Hash : Hash(s<sub>2</sub>,s<sub>7</sub>,s<sub>9</sub>,...) mod `256`<br/>
->>3 <sup>rd</sup> Byte of Hash : Hash(s<sub>3</sub>,s<sub>8</sub>,s<sub>10</sub>,...) mod `256`<br/>
->>4 <sup>th</sup> Byte of Hash : Hash(s<sub>4</sub>,s<sub>9</sub>,s<sub>11</sub>,...) mod `256`<br/>
->>5 <sup>th</sup> Byte of Hash : Hash(s<sub>5</sub>,s<sub>10</sub>,s<sub>12</sub>,...) mod `256`<br/>
+```
+>1 <sup>st</sup> Byte of Hash : Hash(s<sub>1</sub>,s<sub>6</sub>,s<sub>8</sub>,...) mod `256`<br/>
+>2 <sup>nd</sup> Byte of Hash : Hash(s<sub>2</sub>,s<sub>7</sub>,s<sub>9</sub>,...) mod `256`<br/>
+>3 <sup>rd</sup> Byte of Hash : Hash(s<sub>3</sub>,s<sub>8</sub>,s<sub>10</sub>,...) mod `256`<br/>
+>4 <sup>th</sup> Byte of Hash : Hash(s<sub>4</sub>,s<sub>9</sub>,s<sub>11</sub>,...) mod `256`<br/>
+>5 <sup>th</sup> Byte of Hash : Hash(s<sub>5</sub>,s<sub>10</sub>,s<sub>12</sub>,...) mod `256`<br/>
+```
 >Now to find the Hash() you need to take help of given sample input strings and output hashes. If analysed properly you will find Hash() is just an addition operator. So, you can replace Hash() with Add().<br/>
 >5. Now you have figured it out that hash is just addition of given bytes then modulo 256. Now you have to examine the parital flag given to you. <br/>
 >Partial Flag is : `DRDO@60_{A4X3X5}_FLAG!` <br/>
