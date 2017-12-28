@@ -48,7 +48,7 @@
 >>3 <sup>rd</sup> Byte of Hash : Hash(s<sub>3</sub>,s<sub>8</sub>,s<sub>10</sub>,...) mod `256`<br/>
 >>4 <sup>th</sup> Byte of Hash : Hash(s<sub>4</sub>,s<sub>9</sub>,s<sub>11</sub>,...) mod `256`<br/>
 >>5 <sup>th</sup> Byte of Hash : Hash(s<sub>5</sub>,s<sub>10</sub>,s<sub>12</sub>,...) mod `256`<br/>
-Now to find the Hash() you need to take help of given sample input strings and output hashes. If analysed properly you will find Hash() is just an addition operator. So, you can replace Hash() with Add().<br/>
+>Now to find the Hash() you need to take help of given sample input strings and output hashes. If analysed properly you will find Hash() is just an addition operator. So, you can replace Hash() with Add().<br/>
 >5. Now you have figured it out that hash is just addition of given bytes then modulo 256. Now you have to examine the parital flag given to you. <br/>
 >Partial Flag is : `DRDO@60_{A4X3X5}_FLAG!` <br/>
 >If you examine closely both `X` are alternate to each other that means while calculating the hash function either both `X` will use used or no `X` will be used because of propertly of hash bytes specified in challenge statement. <br/>
@@ -58,7 +58,7 @@ Now to find the Hash() you need to take help of given sample input strings and o
 >>* (Y,W) : `89` + `87` = `176`<br/>
 >>* (V,Z) : `86` + `90` = `176`<br/>
 >>* (Z,V) : `90` + `86` = `176`<br/><br/>
-You have 5 chances to verify correct pair and you have only 4 options. You need to submit the flag and check each option.<br/>
+>You have 5 chances to verify correct pair and you have only 4 options. You need to submit the flag and check each option.<br/>
 >6. Flag is : `DRDO@60_{A4Z3V5}_FLAG!`<br/>
 
 ## Python Program
