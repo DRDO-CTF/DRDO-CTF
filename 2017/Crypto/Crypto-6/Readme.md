@@ -18,7 +18,7 @@
 >![Scenario.png](Scenario.png)<br/>
 >Details of Hash functions are as follows:<br/>
 >Hash Function:<br/>
-```
+>```
 >1st Byte: Addition/substraction/multiplication of following bytes of input string: 1,6,8,10,12… mod 256
 >2nd Byte: Addition/substraction/multiplication of following bytes of input string: 2,7,9,11,13… mod 256
 >3rd Byte: Addition/substraction/multiplication of following bytes of input string: 3,8,10,12,14… mod 256
