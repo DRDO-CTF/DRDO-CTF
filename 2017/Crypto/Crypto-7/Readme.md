@@ -24,40 +24,34 @@
 
 ## Write-up
 
-1. As mentioned in challenge statement, Diffie-hellman key exchange mechanism is used here. Serect in DH is g<sup>(ab)</sup> which can only be known if `a` and `b` are known to both parites. `a` and `b` are never exchanged in DH and only g<sup>a</sup>, g<sup>b</sup> are exchanged. <br/>
+>1. As mentioned in challenge statement, Diffie-hellman key exchange mechanism is used here. Serect in DH is g<sup>(ab)</sup> which can only be known if `a` and `b` are known to both parites. `a` and `b` are never exchanged in DH and only g<sup>a</sup>, g<sup>b</sup> are exchanged. <br/>
+>2. First step would be to find the secret value which is g<sup>(ab)</sup>. To find it following condition are given in challenge.<br/>
+>>* `Generator g<25 and 400<q<700`<br/>
+>>* `100 < a , b < 1500 and a + b = 2298`<br/>
+>Now we need to bruteforce for the value of a and b to find g<sup>(ab)</sup>. <br/>
+>While writing the bruteforce it can be observed that both `a,b >= 799` because to achieve the addition `2298` if one    parameter is maximum `1499` then other has to minimum `799`. <br/>
+>   Therfore second codition could be modified to `798 < a , b < 1500 and a + b = 2298`<br/>
+>   If you bruteforce in the given range of values you will find follwing set of parameter satisfying the mentioned conditions.<br/>
 
-2. First step would be to find the secret value which is g<sup>(ab)</sup>. To find it following condition are given in challenge.<br/>
-
-* `Generator g<25 and 400<q<700`<br/>
-* `100 < a , b < 1500 and a + b = 2298`<br/>
-
-   Now we need to bruteforce for the value of a and b to find g<sup>(ab)</sup>. <br/>
-
-   While writing the bruteforce it can be observed that both `a,b >= 799` because to achieve the addition `2298` if one    parameter is maximum `1499` then other has to minimum `799`. <br/>
-
-   Therfore second codition could be modified to `798 < a , b < 1500 and a + b = 2298`<br/>
-
-   If you bruteforce in the given range of values you will find follwing set of parameter satisfying the mentioned conditions.<br/>
-
-|Sl|g|q|a|b|g<sup>(ab)</sup> mod q|
-| ----:|:---------:| -----:|----:|----:|----:|
-|1|23|654|827|1471|329|
-|2|23|654|863|1435|329|
-|3|23|654|899|1399|329|
-|4|23|654|935|1363|329|
-|5|23|654|971|1327|329|
-|6|23|654|1007|1291|329|
-|7|23|654|1115|1183|329|
-|8|23|654|1151|1147|329|
-|9|23|654|1187|1111|329|
-|10|23|654|1223|1075|329|
-|11|23|654|1259|1039|329|
-|12|23|654|1295|1003|329|
-|13|23|654|1331|967|329|
-|14|23|654|1367|931|329|
-|15|23|654|1403|895|329|
-|16|23|654|1439|859|329|
-|17|23|654|1475|823|329|
+>|Sl|g|q|a|b|g<sup>(ab)</sup> mod q|
+>| ----:|:---------:| -----:|----:|----:|----:|
+>|1|23|654|827|1471|329|
+>|2|23|654|863|1435|329|
+>|3|23|654|899|1399|329|
+>|4|23|654|935|1363|329|
+>|5|23|654|971|1327|329|
+>|6|23|654|1007|1291|329|
+>|7|23|654|1115|1183|329|
+>|8|23|654|1151|1147|329|
+>|9|23|654|1187|1111|329|
+>|10|23|654|1223|1075|329|
+>|11|23|654|1259|1039|329|
+>|12|23|654|1295|1003|329|
+>|13|23|654|1331|967|329|
+>|14|23|654|1367|931|329|
+>|15|23|654|1403|895|329|
+>|16|23|654|1439|859|329|
+>|17|23|654|1475|823|329|
 <br/>
    You can observe that whatever the value of a and b, g<sup>(ab)</sup> mod q is same which is `329` and this is our secret value.<br/>
 
