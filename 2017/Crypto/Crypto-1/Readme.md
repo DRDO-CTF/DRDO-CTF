@@ -17,7 +17,8 @@
 
 ## Write-up
 
->1. Perfect Secrecy means it is One-Time-Pad which is bascially byteswise XOR of key and plaintext.(You can use http://xor.pw/# for XOR operation)<br/>
+>1. Perfect Secrecy means it is One-Time-Pad which is bascially byteswise XOR of key and plaintext.<br/>
+>(You can use http://xor.pw/# for XOR operation)<br/>
 >2. Open the image in hex-editor. Last bytes in the image are key bytes.<br/>
 >![hex\_key.png](hex_key.png)<br/>
 >Therefore key is: ``NABHRATNA_{FLYWITHAIR}`` which is of exactly same length as the crypt-message.<br/>
